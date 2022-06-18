@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@700&family=Lexend+Deca&display=swap"
+        rel="stylesheet">
+    <link rel="icon" type="image/x-icon" href="images/favicon.png">
+    <title>3 Column Card</title>
+</head>
+<style>
+    /* Bright orange: hsl(31, 77%, 52%)
+Dark cyan: hsl(184, 100%, 22%)
+Very dark cyan: hsl(179, 100%, 13%) 
+Transparent white (paragraphs): hsla(0, 0%, 100%, 0.75)
+Very light gray (background, headings, buttons): hsl(0, 0%, 95%)
+font-family: 'Big Shoulders Display', cursive;
+font-family: 'Lexend Deca', sans-serif;
+*/
+    body {
+        width: 100vw;
+        height: 100vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: hsl(0, 0%, 95%);
+        font-family: 'Lexend Deca', sans-serif;
+    }
+
+    h1,
+    h2 {
+        font-family: 'Big Shoulders Display', cursive;
+    }
+
+    .container {
+        color: hsl(0, 0%, 95%);
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        width: auto;
+        height: auto;
+    }
+
+    .container :first-child {
+        border-top-left-radius: 16px;
+        border-bottom-left-radius: 16px;
+    }
+
+    .container :last-child {
+        border-top-right-radius: 16px;
+        border-bottom-right-radius: 16px;
+    }
+
+    .section {
+        max-width: 250px;
+        display: flex;
+        flex-direction: column;
+        height: 350px;
+        padding: 50px;
+    }
+
+    .section img {
+        width: 60px;
+        height: auto;
+    }
+
+    .section button {
+        border: none;
+        border-radius: 24px;
+        width: 100px;
+        height: 40px;
+        margin-top: auto;
+        display: block;
+        justify-self: flex-end;
+        font-family: 'Lexend Deca', sans-serif;
+    }
+
+    .section p {
+        margin: 0;
+    }
+
+    .first {
+        background-color: hsl(31, 77%, 52%);
+    }
+
+    .first button {
+        color: hsl(31, 77%, 52%);
+    }
+
+    .second {
+        background-color: hsl(184, 100%, 22%)
+    }
+
+    .second button {
+        color: hsl(184, 100%, 22%)
+    }
+
+    .third {
+        background-color: hsl(179, 100%, 13%)
+    }
+
+    .third button {
+        color: hsl(179, 100%, 13%)
+    }
+</style>
+
+<body>
+    <div class="container">
+        <div class="section first">
+            <img src="images/icon-sedans.svg" alt="">
+            <h1>SEDANS</h1>
+            <p>Choose a sedan for its affordability and excellent fuel economy. Ideal for cruising in the city or an
+                your next road trip</p>
+            <button>Learn More</button>
+        </div>
+        <div class="section second">
+            <img src="images/icon-suvs.svg" alt="">
+            <h1>SUVS</h1>
+            <p>Take an SUV for it's spacious interior, power, and versatility. Perfect for your next family vacation and
+                off-road adventures.</p>
+            <button>Learn More</button>
+        </div>
+        <div class="section third">
+            <img src="images/icon-luxury.svg" alt="">
+            <h1>LUXURY</h1>
+            <p>Cruise in the lesss car brands without the bloated prices. Enjoy the enhanced comfort of a luxury rental
+                and arrive at in style</p>
+            <button>Learn More</button>
+        </div>
+    </div>
+</body>
+
+</html>
